@@ -20,12 +20,6 @@ El sistema desarrollado es un pipeline de machine learning que:
 - Entrena un modelo de recomendación colaborativo con SVD.
 - Genera un archivo con las recomendaciones personalizadas para cada usuario.
 
-- 🛠️ Preprocesamiento: Limpieza y normalización de datos crudos (JSON y CSV).
-- 🔍 Feature Engineering: Generación de variables (interacciones, compras, clics y visualizaciones destacadas).
-- 📉 Entrenamiento SVD: Reducción dimensional de la matriz usuario-producto para capturar patrones latentes.
-- 🎁 Generación de recomendaciones: Ranking de los productos más relevantes para cada usuario.
-- 📂 Resultados exportables: Archivos CSV con las recomendaciones personalizadas.
-
 ## ⚠️ Consideraciones
 
 - Los datos fuente no están en el repositorio por políticas de seguridad (fueron añadidos al .gitignore).
@@ -70,7 +64,7 @@ python pipeline.py
 ```
 Esto generará:
 - 📄 data/processed/SVD_model_df.csv → Tabla base para el modelo.
-- - 📄 data/processed/df_final.csv → Archivo con la estructura final solicitada en la prueba.
+- 📄 data/processed/df_final.csv → Archivo con la estructura final solicitada en la prueba.
 - 📄 data/output_models/recommendations_SVD.csv → Archivo con las recomendaciones finales.
 
 # 👤 Casos de uso
