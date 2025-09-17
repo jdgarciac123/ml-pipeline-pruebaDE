@@ -10,8 +10,9 @@ def main():
     df_prints, df_taps, df_pays = load_data(config.RAW_PRINTS, config.RAW_TAPS, config.RAW_PAYS)
 
     # 2. Feature engineering
-    df_svd = build_features(df_prints, df_taps, df_pays)
+    df_svd, df_final = build_features(df_prints, df_taps, df_pays)
     df_svd.to_csv(config.PROCESSED_SVD)
+    df_final.to_csv(config.PROCESSED_FINAL, index=False)
     df_svd = pd.read_csv(config.PROCESSED_SVD)
 
     # 3. Entrenar SVD
